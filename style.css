@@ -1,0 +1,151 @@
+:root {
+  --primary: #100e17;
+  --secondary: #17141d;
+  --tertiary: #7a7a8c;
+  --quaternary: #f46330;
+  --quintary: #28242f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px;
+  overflow: hidden;
+}
+
+.container .card:nth-child(1),
+.container .card:nth-child(2) {
+  margin-left: 0;
+}
+
+.card-title {
+  flex-shrink: 0;
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 99px 0 rgba(0, 0, 0, 1);
+  background-color: var(--quaternary);
+  margin-right: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-title h2 {
+  font-size: 24px;
+}
+
+.card {
+  flex-shrink: 0;
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 99px 0 rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--secondary);
+  padding: 30px;
+  font-size: 10px;
+  margin-left: -150px;
+  transition: 0.2s;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  margin-right: 150px;
+}
+
+.card .data {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card .data time {
+  color: var(--tertiary);
+}
+
+.card h2 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  display: block;
+  height: 110px;
+}
+
+.card .autor {
+  display: flex;
+  align-items: center;
+}
+
+.card .autor .img-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 3px var(--quaternary);
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.card .autor .img-container .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: url(./assets/avatar.png) no-repeat center center;
+  background-size: cover;
+}
+
+.card .autor .info {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card .autor .info span {
+  display: block;
+  font-size: 10px;
+  color: var(--tertiary);
+}
+
+.card .tags a {
+  display: inline-block;
+  border: solid 3px var(--quintary);
+  border-radius: 30px;
+  padding: 8px 25px;
+  text-transform: uppercase;
+  color: var(--tertiary);
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 3px;
+  transition: all ease-out 0.3s;
+}
+
+.card .tags a:hover {
+  border-color: #fff;
+  color: var(--quaternary);
+}
